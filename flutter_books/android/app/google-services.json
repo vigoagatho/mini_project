@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1077482002392",
+    "project_id": "ruangbaca-f0197",
+    "storage_bucket": "ruangbaca-f0197.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077482002392:android:0a4346feea6f3232fb44ad",
+        "android_client_info": {
+          "package_name": "com.example.flutter_books"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077482002392-noceh62gq9pognc74vmt48ga88t1req5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAz6TLxfzhXnn1ra3UNcjFgnGrOo4xcd0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077482002392-noceh62gq9pognc74vmt48ga88t1req5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
