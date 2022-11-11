@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_books/models/books_model.dart';
-import 'package:flutter_books/screens/detail_screen.dart';
+import 'package:flutter_books/screens/books/detail_screen.dart';
 
 Widget rowTile(Book book, BuildContext context) {
   return GestureDetector(

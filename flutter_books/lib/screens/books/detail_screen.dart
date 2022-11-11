@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_books/models/books_model.dart';
+import 'package:flutter_books/screens/notes/add_note.dart';
 import 'package:flutter_books/services/favourite_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -111,16 +112,35 @@ class DetailScreen extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 20),
                 child: Container(
                     margin: EdgeInsets.symmetric(horizontal: 60),
-                    child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            minimumSize: Size(80, 40),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
-                            backgroundColor: Colors.amber.shade800),
-                        onPressed: () async {
-                          await openUrl(book.url);
-                        },
-                        child: Text('Baca Sekarang'))),
+                    child: Row(
+                      children: [
+                        ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                minimumSize: Size(80, 40),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20)),
+                                backgroundColor: Colors.amber.shade800),
+                            onPressed: () async {
+                              await openUrl(book.url);
+                            },
+                            child: Text('Baca Sekarang')),
+                        
+                        SizedBox(width: 30,),
+
+                        ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                minimumSize: Size(80, 40),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20)),
+                                backgroundColor: Colors.purple.shade800),
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: ((context) {
+                                return AddNote();
+                              })));
+                            },
+                            child: Text('Buat Catatan')),
+                      ],
+                    )),
               )
             ]))
           ],

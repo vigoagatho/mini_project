@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_books/screens/home_screen.dart';
-import 'package:flutter_books/screens/register_screen.dart';
+import 'package:flutter_books/screens/login_register/register_screen.dart';
 import 'package:flutter_books/services/user_provider.dart';
 import 'package:flutter_books/widgets/login_container.dart';
 import 'package:provider/provider.dart';

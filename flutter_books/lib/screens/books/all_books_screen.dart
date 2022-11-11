@@ -22,20 +22,16 @@ class AllBooks extends StatelessWidget {
           );
         } else {
           List<Book> books = snapshot.data!;
-          return Column(
-            children: [
-              ListView.builder(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 25, horizontal: 25),
-                  physics: const BouncingScrollPhysics(
-                      parent: AlwaysScrollableScrollPhysics()),
-                  // shrinkWrap: true,
-                  itemCount: books.length,
-                  itemBuilder: (context, index) {
-                    return listTile(books[index], context);
-                  }),
-            ],
-          );
+          return ListView.builder(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 25, horizontal: 25),
+              physics: const BouncingScrollPhysics(
+                  parent: AlwaysScrollableScrollPhysics()),
+              // shrinkWrap: true,
+              itemCount: books.length,
+              itemBuilder: (context, index) {
+                return listTile(books[index], context);
+              });
         }
       }),
     );

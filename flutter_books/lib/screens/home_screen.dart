@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_books/screens/all_books_screen.dart';
-import 'package:flutter_books/screens/detail_screen.dart';
-import 'package:flutter_books/screens/fav_books_screen.dart';
+import 'package:flutter_books/screens/books/all_books_screen.dart';
+import 'package:flutter_books/screens/books/detail_screen.dart';
+import 'package:flutter_books/screens/books/fav_books_screen.dart';
+import 'package:flutter_books/screens/notes/note_grid.dart';
+import 'package:flutter_books/screens/profile/profile_edit_screen.dart';
+import 'package:flutter_books/screens/profile/profile_screen.dart';
 import 'package:flutter_books/widgets/book_list_widget.dart';
 import 'package:flutter_books/widgets/book_row_widget.dart';
 
@@ -37,10 +40,22 @@ class HomeScreen extends StatelessWidget {
             ),
             Divider(height: 0.5,),
             ListTile(
-              leading: Icon(Icons.history_outlined, size: 35,),
-              title: Text('History Bacaan', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+              leading: Icon(Icons.note_alt_outlined, size: 35,),
+              title: Text('Catatan', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
               onTap: () {
-                
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return NoteGrid();
+                }));
+              },
+            ),
+            Divider(height: 0.5,),
+            ListTile(
+              leading: Icon(Icons.person_outline_rounded, size: 35,),
+              title: Text('Profile', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return ProfileScreen();
+                }));
               },
             ),
           ],
@@ -66,31 +81,6 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
               )),
-
-          // Search Bar
-          // Container(
-          //   height: 45,
-          //   margin: const EdgeInsets.only(left: 25, right: 25, top: 20),
-          //   decoration: BoxDecoration(
-          //     borderRadius: BorderRadius.circular(10),
-          //     color: Colors.grey.shade600,
-          //   ),
-          //   child: Stack(
-          //     children: [
-          //       const TextField(
-          //         decoration: InputDecoration(
-          //             hintText: 'Cari Buku...',
-          //             contentPadding: EdgeInsets.only(left: 15),
-          //             border: InputBorder.none),
-          //         style: TextStyle(fontSize: 12),
-          //       ),
-          //       Positioned(
-          //         right: 0,
-          //         child: IconButton(onPressed: () {}, icon: Icon(Icons.search), color: Colors.amber,),
-          //       )
-          //     ],
-          //   ),
-          // ),
           Padding(
             padding: const EdgeInsets.only(top: 20, left: 20),
             child: Row(

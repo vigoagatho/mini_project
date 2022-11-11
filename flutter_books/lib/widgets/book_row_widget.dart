@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_books/models/api/books_api.dart';
 import 'package:flutter_books/models/books_model.dart';
-import 'package:flutter_books/screens/detail_screen.dart';
+import 'package:flutter_books/screens/books/detail_screen.dart';
 import 'package:flutter_books/widgets/utils/books_row_tile.dart';
 
 class BookRow extends StatefulWidget {
