@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Sen',
           brightness: Brightness.dark
         ),
+        debugShowCheckedModeBanner: false,
         home: LoginScreen(),
       ),
     );

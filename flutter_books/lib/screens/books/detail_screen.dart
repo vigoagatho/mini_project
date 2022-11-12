@@ -70,7 +70,7 @@ class DetailScreen extends StatelessWidget {
             SliverList(
                 delegate: SliverChildListDelegate([
               Padding(
-                padding: EdgeInsets.only(top: 24, left: 25),
+                padding: EdgeInsets.only(top: 24, left: 25, right: 25),
 
                 /// TODO: Insert data for title
                 child: Text(
@@ -135,7 +135,7 @@ class DetailScreen extends StatelessWidget {
                                 backgroundColor: Colors.purple.shade800),
                             onPressed: (){
                               Navigator.push(context, MaterialPageRoute(builder: ((context) {
-                                return AddNote();
+                                return AddNote(book: book,);
                               })));
                             },
                             child: Text('Buat Catatan')),

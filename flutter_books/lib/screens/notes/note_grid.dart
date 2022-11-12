@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_books/models/books_model.dart';
 import 'package:flutter_books/screens/notes/add_note.dart';
 import 'package:flutter_books/screens/notes/edit_note.dart';
 
@@ -11,6 +12,7 @@ class NoteGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ref = FirebaseFirestore.instance.collection('notes');
+    
     return Scaffold(
       appBar: AppBar(
         title: Text('My Notes'),
@@ -51,14 +53,6 @@ class NoteGrid extends StatelessWidget {
             }));
         }
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.orange.shade600,
-        child: Icon(Icons.add, color: Colors.white,),
-        onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: ((context) {
-            return AddNote();
-          })));
-        }),
     );
   }
 }

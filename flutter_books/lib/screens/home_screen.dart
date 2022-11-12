@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_books/screens/books/all_books_screen.dart';
-import 'package:flutter_books/screens/books/detail_screen.dart';
 import 'package:flutter_books/screens/books/fav_books_screen.dart';
 import 'package:flutter_books/screens/notes/note_grid.dart';
-import 'package:flutter_books/screens/profile/profile_edit_screen.dart';
 import 'package:flutter_books/screens/profile/profile_screen.dart';
 import 'package:flutter_books/widgets/book_list_widget.dart';
 import 'package:flutter_books/widgets/book_row_widget.dart';

@@ -2,10 +2,13 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_books/models/books_model.dart';
+import 'package:flutter_books/screens/notes/add_note.dart';
 
 class EditNote extends StatefulWidget {
   EditNote({super.key, required this.docToEdit});
   DocumentSnapshot docToEdit;
+
   @override
   State<EditNote> createState() => _EditNoteState();
 }

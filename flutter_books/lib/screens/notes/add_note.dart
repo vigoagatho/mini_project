@@ -2,17 +2,20 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_books/models/books_model.dart';
 
 class AddNote extends StatelessWidget {
-  AddNote({super.key});
+  final Book book;
+  AddNote({super.key, required this.book});
 
   TextEditingController judulController = TextEditingController();
   TextEditingController cttController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    FirebaseFirestore firestore = FirebaseFirestore.instance;
+  FirebaseFirestore firestore = FirebaseFirestore.instance;
   CollectionReference ref = firestore.collection('notes');
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange.shade600,
@@ -33,6 +36,13 @@ class AddNote extends StatelessWidget {
         margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
         child: Column(
           children: [
+            Padding(padding: EdgeInsets.all(10), child: Row(
+              children: [
+                Text('Terkait Buku : '),
+                Expanded(child: Text(book.title,))
+              ],
+            ),),
+            SizedBox(height: 10,),
             Container(
               decoration: BoxDecoration(border: Border.all()),
               child: TextField(
